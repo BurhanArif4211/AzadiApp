@@ -1,39 +1,68 @@
 <script>
 	import Block3D from "./Block3D.svelte"
+	import Nav from "./Nav.svelte"
 
 </script>
+
 <head>
 	<title>Azadi | Home</title>
 </head>
-<body>
-	<!--  -->
+<div class="main">
 	<div class="header">
 		<div class="header__top">Azadi</div>
         <div class="header__main"><!--<Block3D text=" XXXX | YYYY | ZZZZ | AAAA "/>-->PAKISTAN</div>
 	</div>
-   
-</body>
 
+	<!-- <Separate/> -->
+	<div class="one">
+		<div class="right">
+
+		</div>
+		<div class="left">
+
+		</div>
+	</div>
+	<div class="two">
+		<div class="right">
+
+		</div>
+		<div class="left">
+			
+		</div>
+	</div>
+<!-- <Footer/> -->
+<Nav/>
+</div>
 <style>
-	@font-face {
-		font-family: nation;
-		src: url(../../src/lib/fonts/Nation.ttf);
-	}
-	* {
-		padding: 0;
-		margin: 0;
-		border: 0;
-		font-family: nation;
-		color:white;
-		background: black;
-	}
-	body{
-		padding: 5%;
-		z-index: 0;
-	}
+	
+	*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;  
+}
+.main{  
+position: relative;
+height: 100vh;
+}
 	.header{
-		font-size: clamp(75px, 6vw, 356px);;
-		position: relative;
+		
+
+		font-size: clamp(7rem, 6vw, 22rem);;
+	}
+	.header__main{
+		position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+		
+	}
+	.header__top{
+		position: absolute;
+        top: 90px;
+        left: 30px;
 	}
 
 </style>

@@ -4,12 +4,12 @@ let slide=false
 
 	const toggleNav = () => {
 		isNavOpen = !isNavOpen
-    slide=!slide
+        slide=!slide
 	}
 </script>
 
-<main>
-	<button
+
+	<div
 		id="button"
 		class="toggle"
     class:toggled={slide}
@@ -18,81 +18,91 @@ let slide=false
 		}}
 	>
 		<div id="icon" />
-	</button>
-
-	<div class:slide={slide} class="nav">
-		<ul  >
-			<li class="nav__item">Home</li>
-			<li class="nav__item">About</li>
-			<li class="nav__item">Create</li>
-			<li class="nav__item">History</li>
-			<li class="nav__item">Games</li>
-		</ul>
 	</div>
-
 	{#if isNavOpen}
-		<div
-			id="overlay"
-			on:click={() => {
-				toggleNav();
-				
-			}}
-		/>
+		<div id="overlay" on:click={() => {toggleNav();}}/>
 	{/if}
-</main>
+<nav class:slide={slide} class="nav" >
+			<li class="nav__item"><a href="/">Home</a></li>
+			<li class="nav__item"><a href="/About">About</a></li>
+			<li class="nav__item"><a href="/Create">Create</a></li>
+			<li class="nav__item"><a href="/History">History</a></li>
+			<li class="nav__item"><a href="/Games">Games</a></li>
+</nav>
+
 
 <style lang="scss">
-  	* {
-		padding: 0;
-		margin: 0;
-		border: 0;}
+
+
+  	
 	/* *NAV Sec */
   .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 900px;
-    padding: 3%;
-    height: 100vh;
-    z-index: 2;
+	color:white;
+    font-family: nation;
+	position: fixed;
+    z-index: 3;
     text-decoration: none;
     transform: translateX(-200%);
-      transition: transform 1s ease;
+    transition: all 1s ease;
+	height: 100vh;
+
+	background: #006400 url('/src/lib/clips/Bunting_nav.jpg');
+
+	background-position:0 -780px ;
+
+	background-size: 1080px;
+	background-repeat: no-repeat;
+	
+	padding: 0;
+	text-align: left;
+    padding:30px ;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	perspective: 1000px;
+	@media (width>=360px) {
+		height: 117vh;
+		
+	}
   }
 .slide{
   transform: translateX(0);
+	background-position:-270px -15px;
+	background-size: 860px;
 }
 
-	ul {
-		background-color: #006400;
-		position: fixed;
-		z-index: 1;
-		top: 0;
-		bottom: 0;
-		left: 0;
+.nav__item {
+    font-size: clamp(4rem, 4vW, 10rem);
+    display: block;
+    padding: 1.16vh 0;
+    position: relative; /* Add this to establish a positioning context */
+    cursor: pointer;
+	text-shadow: 0px 0px 7px black  ;
+	transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-style: preserve-3d; /* Enable 3D transformations */
+	transform-style: preserve-3d;
 
-		padding: 0;
-		text-align: left;
-    padding-left:20px ;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+}
 
+.nav__item:hover {
+   animation: alterer 2s ease-in-out infinite/* Rotate on Y-axis */
+}
+@keyframes alterer {
+	0%{
+transform: rotateX(0deg);		
 	}
-	.nav__item {
-		font-size: clamp(55px, 4vw, 366px);
-		display: block;
-		padding: 1.16vh 0;
+	50%{
+transform: rotateX(-360deg);
 	}
-
-
-
+	100%{
+transform: rotateX(0deg);
+	}
+}
 	a {
 		padding: 8px 8px 8px 32px;
-		text-decoration: none;
-		color: #818181;
-		display: block;
-		transition: 0.3s;
+		all: unset;
+				display: block;
+		
 	}
 
   #button {
@@ -109,11 +119,14 @@ let slide=false
 				background-color: transparent;
 
 				&:before {
+					// background-color: #006400;
 					top: 0px;
 					transform: rotate(-45deg);
+
 				}
 
 				&:after {
+					// background-color: #006400;
 					bottom: 0px;
 					transform: rotate(45deg);
 				}
@@ -153,8 +166,9 @@ let slide=false
 	.toggle {
 		z-index: 4;
 		position: fixed;
+	     transform: scale(0.3);
 		top: 30px;
-		left: 20px;
+		left: 09px;
 	}
 	#overlay {
 		position: fixed;
@@ -164,20 +178,12 @@ let slide=false
 		left: 0;
 		top: 0;
 		background-color: rgba(0, 0, 0, 0.5);
-		transition: 0.5s;
+		transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 		backdrop-filter: blur(5px);
 		z-index: 1;
+		
 	}
 
-	body {
-		align-items: center;
-		display: flex;
-		height: 100vh;
-		justify-content: center;
-		margin: 0px;
-		padding: 0px;
-		width: 100vw;
-	}
 
 
 </style>
