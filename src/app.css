@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: nation;
-  src: url(../../src/lib/fonts/Nation.ttf);
+  src: url(/src/lib/fonts/Nation.ttf);
 }
 body{
     background-color: black;
