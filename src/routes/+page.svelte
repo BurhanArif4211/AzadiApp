@@ -7,6 +7,9 @@
 <head>
 	<title>Azadi | Home</title>
 </head>
+<video id="video-background" autoplay muted loop>
+	<source src="/src/lib/backdrop.mp4" type="video/mp4">
+ </video>
 <div class="main">
 	<div class="header">
 		<div class="header__top">Azadi</div>
@@ -35,7 +38,7 @@
 </div>
 <style>
 	
-	*,
+*,
 *::before,
 *::after {
   margin: 0;
@@ -43,14 +46,23 @@
   border: 0;
   box-sizing: border-box;  
 }
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	/* opacity: 0.7; */
+    z-index: -1; /* Place the video behind other content */
+  }
 .main{  
 position: relative;
 height: 100vh;
 }
 	.header{
-		
 
-		font-size: clamp(7rem, 6vw, 22rem);;
+		font-size: clamp(3rem, 6vw, 22rem);;
 	}
 	.header__main{
 		position: absolute;
