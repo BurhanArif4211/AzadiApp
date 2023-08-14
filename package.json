@@ -29,12 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"formidable": "^3.5.0",
-		"fs": "^0.0.1-security",
-		"multer": "^1.4.5-lts.1",
-		"node": "^20.5.0",
 		"path": "^0.12.7",
-		"sass": "^1.65.1",
 		"uuid": "^9.0.0"
 	}
 }
