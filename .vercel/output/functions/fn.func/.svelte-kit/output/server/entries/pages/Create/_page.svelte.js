@@ -1,0 +1,17 @@
+import { c as create_ssr_component, f as each, d as add_attribute, e as escape } from "../../../chunks/ssr.js";
+const _page_svelte_svelte_type_style_lang = "";
+const css = {
+  code: '@font-face{font-family:nation;src:url(/src/lib/fonts/Nation.ttf)}.svelte-t53tqr.svelte-t53tqr{font-family:nation}.cont.svelte-t53tqr.svelte-t53tqr{display:flex;flex-direction:column;align-items:center;font-size:62.5%;color:#ffffff;height:100vh;width:100vw;position:fixed;top:0;left:0;width:100%;height:100%;background-repeat:no-repeat;background-attachment:fixed;background:url("/src/lib/clips/BACKDROP_DARK.jpg")}.item.svelte-t53tqr.svelte-t53tqr{margin-top:10vh;width:100%;max-width:775px;padding:1rem;text-align:center}.display.svelte-t53tqr.svelte-t53tqr{width:100%;max-width:775px;padding:1rem;text-align:center;margin-top:20px}.display.svelte-t53tqr img.svelte-t53tqr{width:unset;height:unset;width:100%}@media(min-width: 776px){.cont.svelte-t53tqr.svelte-t53tqr{flex-direction:row;background-position:left;justify-content:space-between}.item.svelte-t53tqr.svelte-t53tqr{width:calc(50% - 20px);margin-right:20px}.display.svelte-t53tqr.svelte-t53tqr{width:calc(50% - 20px);margin-left:20px}}label.svelte-t53tqr.svelte-t53tqr{padding:10px 0;font-size:16px;color:#fff;transition:.5s}.input.svelte-t53tqr.svelte-t53tqr{width:100%;padding:10px 20px;font-size:16px;color:#fff;margin-bottom:30px;border-radius:100px;border:1px solid #fff;outline:none;background:transparent;cursor:pointer}input.svelte-t53tqr.svelte-t53tqr:focus,input.svelte-t53tqr.svelte-t53tqr:valid{top:-20px;left:0;color:#03e9f4;font-size:12px}.h2.svelte-t53tqr.svelte-t53tqr{text-align:left;font-size:clamp(1rem, 2.2vw, 4rem)}button.svelte-t53tqr.svelte-t53tqr{all:unset;background-color:white;border-radius:100px;border:solid #fff 1px ;padding:0.5rem 0.25rem;color:black;font-size:clamp(0.7rem, 1.2vw, 3.16rem)}a.svelte-t53tqr.svelte-t53tqr{all:unset;display:inline-block;color:black;text-decoration:none;text-transform:uppercase;overflow:hidden;transition:.5s}.drop.svelte-t53tqr.svelte-t53tqr{background-color:transparent;font-size:clamp(1rem, 2.2vw, 4rem)}.drop.svelte-t53tqr.svelte-t53tqr::selection{color:black}',
+  map: null
+};
+const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const titles = ["Event1", "Event2", "Event3"];
+  $$result.css.add(css);
+  return `<div class="cont svelte-t53tqr"><div class="item svelte-t53tqr"><form class="svelte-t53tqr"><label class="svelte-t53tqr"><div class="h2 svelte-t53tqr" data-svelte-h="svelte-1lpm89b">Select title:</div> <select class="drop svelte-t53tqr" name="title" type="text">${each(titles, (t) => {
+    return `<option${add_attribute("value", t, 0)} class="svelte-t53tqr">${escape(t)}</option>`;
+  })}</select></label> <label class="svelte-t53tqr" data-svelte-h="svelte-1b2gzq"><div class="h2 svelte-t53tqr">Your name:</div> <input class="input svelte-t53tqr" type="text" name="name"></label> <label class="svelte-t53tqr" data-svelte-h="svelte-1f2kgu2"><div class="h2 svelte-t53tqr">Upload background image:</div> <input class="input svelte-t53tqr" name="file" type="file"></label> <label class="svelte-t53tqr" data-svelte-h="svelte-12fqgcp"><div class="h2 svelte-t53tqr">Output format:</div> <input type="radio" name="outputFormat" value="jpg" class="svelte-t53tqr"> JPG
+				<input type="radio" name="outputFormat" value="pdf" class="svelte-t53tqr"> PDF</label> <button type="submit" class="svelte-t53tqr" data-svelte-h="svelte-vzy0h">Create Wish Card</button></form></div> ${``} </div>`;
+});
+export {
+  Page as default
+};
