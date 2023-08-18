@@ -57,6 +57,7 @@
 	  width: 100%;
 	  height: 100%;
 	  object-fit: cover;
+	  background: black;
 	  /* opacity: 0.7; */
 	  z-index: -1;
 	}
