@@ -19,6 +19,7 @@ let slide=false
 	>
 		<div id="icon" />
 	</div>
+	<div class="overlayIntro overlay"></div>
 	{#if isNavOpen}
 		<div id="overlay" on:click={() => {toggleNav();}}/>
 	{/if}
@@ -32,11 +33,9 @@ let slide=false
 
 
 <style lang="scss">
-
-
-  	
 	/* *NAV Sec */
   .nav {
+	top: 0;
 	color:white;
     font-family: nation;
 	position: fixed;
