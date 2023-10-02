@@ -2,7 +2,6 @@
 	import Block3D from './Block3D.svelte';
 	import ContactForm from './ContactForm.svelte'
 	import ImageCont from './ImageCont.svelte'
-	import Nav from './Nav.svelte';
 	import Separate from './Separate.svelte';
   </script>
   
@@ -38,17 +37,19 @@
 	<div class="para" ><ContactForm/></div>
 </div>
 	<!-- <Footer/> -->
-	<Nav />
+
   </div>
   <div class="overlayIntro"></div>
-  <style>
+  <style lang="css">
+
 	@font-face {
 	  font-family: nation;
 	  src: url(/src/lib/fonts/Nation.ttf);
 	}
 	*{
-		font-family: nation;
+	font-family: nation;
 	  font-size: 62.5%;
+	  color:#fff;
 	}
   
 	#video-background {
@@ -63,7 +64,7 @@
 	  z-index: -1;
 	}
 	.main {
-		font-family: nation;
+	  font-family: nation;
 	  font-size: 62.5%;
 	  color: white;
 	  position: relative;
@@ -126,10 +127,15 @@
       padding: 2rem 2rem;
      }
 	}
-.explore:hover{
-	background: #fff;
-	color: #006400;
+	.explore a{
+		text-decoration: none;
 
+	}
+	.explore:hover {
+	background-color: #fff;
+}
+.explore:hover a{
+	color: black;
 }
 	.one{
 		font-size:clamp(1rem, 2.16vw, 3rem) ;
