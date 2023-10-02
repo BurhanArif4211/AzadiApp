@@ -79,9 +79,7 @@ clearCount=clearCount+1;
 *{
 	font-family: nation;
 }
-body{
-	height: 200vh;
-}
+
 .cont {
   display: flex;
   flex-direction: column; /* Stack the elements vertically on smaller screens */
@@ -91,10 +89,10 @@ body{
   height: 100vh;
   width: 100vw;
   position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 	background-repeat: no-repeat;
   background-attachment: fixed;
   background:url("/src/lib/clips/BACKDROP_DARK.jpg");

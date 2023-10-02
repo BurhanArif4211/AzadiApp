@@ -55,6 +55,7 @@ let slide=false
 	 flex-direction: column;
 	 justify-content: center;
 	 perspective: 1000px;
+	 overflow: hidden;
 }
  @media (width>=360px) {
 	 .nav {
@@ -80,20 +81,9 @@ let slide=false
 	 transform-style: preserve-3d;
 }
  .nav__item:hover {
-	 animation: alterer 2s ease-in-out infinite;
-	/* Rotate on Y-axis */
+	 letter-spacing: 6px;
 }
- @keyframes alterer {
-	 0% {
-		 transform: rotateX(0deg);
-	}
-	 50% {
-		 transform: rotateX(-360deg);
-	}
-	 100% {
-		 transform: rotateX(0deg);
-	}
-}
+
  a {
 	 padding: 8px 8px 8px 32px;
 	 all: unset;

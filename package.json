@@ -31,6 +31,9 @@
 	"type": "module",
 	"dependencies": {
 		"canvas": "^2.11.2",
-		"node-sass": "^9.0.0"
+		"node-sass": "^9.0.0",
+		"openseadragon": "^4.1.0",
+		"svelte-konva": "^0.3.0",
+		"vanilla-lazyload": "^17.8.4"
 	}
 }

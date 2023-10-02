@@ -10,7 +10,7 @@
 	<title>Azadi | Home</title>
   </head>
   <video id="video-background" autoplay muted loop>
-	<source src="/src/lib/backdrop.mp4" type="video/mp4" />
+	<source src="/backdrop.mp4" type="video/mp4" />
   </video>
   <div class="main">
 	  <div class="header__top">Azadi</div>
@@ -19,6 +19,7 @@
 		  There is no power on the face of the Earth which can undo Pakistan.
 		</p>
 		<p class="ref">~Quaid-e-Azam</p>
+		<button  class="explore"><a href="/History">Explore</a></button>
 	</div>
 </div>
 <div class="separator"><Separate /></div>
@@ -27,7 +28,7 @@
 	<div class="box">
 		<div class="heading">Quaid-E-Azam</div>
 		<div class="para" >“You are free. you are free to go to your temples. You are free to go to your mosques or to any other places of worship in this State of Pakistan.”</div>
-		<div class="ImgCont"><ImageCont src="/src/lib/images/Mohammad-Ali-Jinnah.webp" align="right" size="700px"/> </div>
+		<div class="ImgCont"><ImageCont src="/images/Mohammad-Ali-Jinnah.webp" align="right" size="31rem"/> </div>
 </div>	
 </div>
 	</div>
@@ -87,7 +88,7 @@
 	}
   
 	.ref {
-	  font-size: clamp(0.3rem, 2.6vw, 0.7rem);
+	  font-size: clamp(0.3rem, 3vw, 1rem);
 	  position: absolute;
 	  bottom: 0;
 	  right: 0;
@@ -104,7 +105,32 @@
 	  z-index: 2;
 	  animation: intro 3s cubic-bezier(0.41, 0.03, 0.27, 1.01);
 	}
+	.header__main{
+		font-family: 'poppins',"lato";
+	}
+	.explore{
+	position: absolute;
+    background: none;
+    color: #fff;
+    border: solid #ccc;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: clamp(1.16vw, 2vh, 2rem);
+	
+	transform: translate(-50%,0);
+	bottom: -100%;
+    left: 50%;
+    @media (max-width: 775px) {
+      padding: 2rem 2rem;
+     }
+	}
+.explore:hover{
+	background: #fff;
+	color: #006400;
 
+}
 	.one{
 		font-size:clamp(1rem, 2.16vw, 3rem) ;
 		height: 100vh;
@@ -121,6 +147,10 @@ border: 0px solid #FFF;
 background: rgba(217, 217, 217, 0.03);
 box-shadow: 0px 0px 250px 97px rgba(0, 100, 0, 0.15) inset;
 	}
+.ImgCont{
+	padding-right: 10%;
+}
+
 	.box2{
 		margin-top: 30vh;
 		padding: 1.16vw;
@@ -145,7 +175,9 @@ border-radius: 4.375rem;
 			height: 100vh;
 		}
 
+
 		.overlayIntro{
+			pointer-events: none;
 		position: fixed;
 		display: block;
 		width: 100%;
